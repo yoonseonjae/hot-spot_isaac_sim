@@ -31,21 +31,21 @@
 
 본 프로젝트의 아키텍처 및 상세 흐름은 다음 다이어그램 문서들을 참조하십시오. (각 링크 클릭 시 Mermaid 렌더러로 작성된 시각적 흐름도를 보실 수 있습니다.)
 
-1.  **[① 전체 시스템 아키텍처 다이어그램 (Overall System Architecture)](docx/1_overall_system_architecture.md)**
+1.  **[① 전체 시스템 아키텍처 다이어그램 (Overall System Architecture)](docs/1_overall_system_architecture.md)**
     *   Isaac Sim, ROS 2 Nav2, AI/RL 모델 및 브릿지 스크립트 간의 전체 결합도 및 데이터 연동 흐름.
-2.  **[② 쉘 스크립트 실행 파이프라인 흐름도 (Execution Stage Pipeline Flowchart)](docx/2_execution_stage_pipeline.md)**
+2.  **[② 쉘 스크립트 실행 파이프라인 흐름도 (Execution Stage Pipeline Flowchart)](docs/2_execution_stage_pipeline.md)**
     *   Stage 1(수동 확인)부터 Stage 5(완전 자동화)까지 실행 단계별 기동 노드 및 시나리오 확장 구조.
-3.  **[③ 통신 브릿지 네트워크 다이어그램 (Network & Bridge Communication Diagram)](docx/3_communication_bridge_network.md)**
+3.  **[③ 통신 브릿지 네트워크 다이어그램 (Network & Bridge Communication Diagram)](docs/3_communication_bridge_network.md)**
     *   ROS 2 cmd_vel/plan/odom 토픽과 Isaac Sim 소켓/파일 I/O 간의 실시간 브릿지 통신 메커니즘.
-4.  **[④ 멀티 로봇 Nav2 노드 및 TF 트리 아키텍처 (Multi-Robot Nav2 & TF Tree Architecture)](docx/4_multi_robot_nav2_tf.md)**
+4.  **[④ 멀티 로봇 Nav2 노드 및 TF 트리 아키텍처 (Multi-Robot Nav2 & TF Tree Architecture)](docs/4_multi_robot_nav2_tf.md)**
     *   로봇별 독립 네임스페이스(`robot1`, `robot2`) 분리, 공유 맵 서버, 글로벌 TF 트리 통합 구조.
-5.  **[⑤ 로봇 정찰/순찰 임무 시퀀스 다이어그램 (Room Patrol Mission Sequence Diagram)](docx/5_room_patrol_sequence.md)**
+5.  **[⑤ 로봇 정찰/순찰 임무 시퀀스 다이어그램 (Room Patrol Mission Sequence Diagram)](docs/5_room_patrol_sequence.md)**
     *   순회 경로 순찰 ➔ 360도 스핀 동작 및 YOLOv8 조난자 발견 시의 자율주행 인터럽트 천이 과정.
-6.  **[⑥ Spot Arm RL Policy 루프 플로우차트 (Spot Arm Policy Action-State Loop)](docx/6_spot_arm_policy_loop.md)**
+6.  **[⑥ Spot Arm RL Policy 루프 플로우차트 (Spot Arm Policy Action-State Loop)](docs/6_spot_arm_policy_loop.md)**
     *   69차원 관측(Observation) ➔ JIT/MLP 정책 추론 ➔ 19차원 Action 및 동작 강성(Stiffness) 제어 루프.
-7.  **[⑦ 객체 인식 및 맵핑 통합 시퀀스 (YOLOv8 Object Detection & Mapping Flow)](docx/7_yolov8_detection_mapping.md)**
+7.  **[⑦ 객체 인식 및 맵핑 통합 시퀀스 (YOLOv8 Object Detection & Mapping Flow)](docs/7_yolov8_detection_mapping.md)**
     *   YOLOv8 인명 검출에 따른 상태 머신(`SEARCHING` ➔ `ALIGNING` ➔ `APPROACHING` ➔ `ESCORTING` ➔ `DONE`) 전환 흐름.
-8.  **[⑧ 전체 서비스 시나리오 플로우차트 (End-to-End Service Scenario Flowchart)](docx/8_end_to_end_service_scenario.md)**
+8.  **[⑧ 전체 서비스 시나리오 플로우차트 (End-to-End Service Scenario Flowchart)](docs/8_end_to_end_service_scenario.md)**
     *   관리자 관제 시작 ➔ 화재 경보 ➔ 로봇 협업 진압/구조 ➔ 안전 복귀 재난 통제 완료 비즈니스 밸류 체인.
 
 ---
