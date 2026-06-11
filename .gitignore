@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# Isaac Sim이 자동 생성하는 런타임 파일
+/tmp/isaac_pose_robot*.json
+
+# omniverse CDN 머티리얼 캐시 (USB로 별도 전달)
+map/omniverse-content-production.s3.us-west-2.amazonaws.com/
+
+# 대용량 및 바이너리 파일 제외 (GitHub 100MB 제한 우회)
+*.zip
+yolov8n.pt
+
+# 로그 및 텍스트 로그 파일 제외
+*.log
+*_log.txt
