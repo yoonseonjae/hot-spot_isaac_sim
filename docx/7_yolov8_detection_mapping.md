@@ -22,11 +22,7 @@ stateDiagram-v2
     
     %% 비상 전환
     SEARCHING --> ALIGNING : Yes (사람 발견!)
-    note left of ALIGNING
-        순찰 루프 즉시 종료
-        _patrol_active = False
-        Nav2 목표 취소 (Cancel Goal)
-    end
+    note left of ALIGNING : 순찰 루프 즉시 종료<br/>_patrol_active = False<br/>Nav2 목표 취소 (Cancel Goal)
 
     state ALIGNING {
         [*] --> ComputeOffset : Bounding Box 중심점 cx와 이미지 중심 비교
@@ -45,12 +41,7 @@ stateDiagram-v2
     }
 
     APPROACHING --> ESCORTING : Yes (접근 성공)
-    note left of ESCORTING
-        대피 유도 모드 진입
-        - 조난자 충돌체 비활성화 (collision = False)
-        - Nav2 Costmap 강제 초기화 (Clear Costmaps)
-        - Nav2 목표지를 출구(EXIT_POS)로 강제 설정
-    end
+    note left of ESCORTING : 대피 유도 모드 진입<br/>- 조난자 충돌체 비활성화 (collision = False)<br/>- Nav2 Costmap 강제 초기화 (Clear Costmaps)<br/>- Nav2 목표지를 출구(EXIT_POS)로 강제 설정
 
     state ESCORTING {
         [*] --> ExitNav2 : 출구(x=1.568, y=20.041)로 자율주행 실행
